@@ -1,0 +1,21 @@
+Copy this file, call it appsettings.json, and fill in the details of your smtp server
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "AppContextConnection": "Server=(localdb)\\mssqllocaldb;Database=RecipeBook;Trusted_Connection=True;MultipleActiveResultSets=true"
+  },
+  "Email": {
+    "SmtpHost": "",
+    "Port": ,
+    "SenderName": "",
+    "SenderAddress": "",
+    "SenderPassword": ""
+  }
+}

@@ -1,0 +1,28 @@
+﻿@model RecipeBook.Models.Recipe
+
+<div class="card form-section">
+    <div class="card-header">
+        <span class="h5">Yo Yo Yo</span>
+    </div>
+    <div class="card-body">
+        <div class="form-row">
+            <div class="form-group col">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group col">
+                <label asp-for="Source" class="control-label"></label>
+                <input asp-for="Source" class="form-control" />
+                <span asp-validation-for="Source" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,300 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+
+/* Override Bootstrap */
+.card {
+    border-radius: 10px;
+    padding: 30px;
+    margin: 10px;
+}
+
+.container {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.row {
+    margin: 0
+}
+/* End Override Bootstrap */
+
+
+
+a .navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+.site-logo {
+    height: 30px;
+}
+
+
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-top: 50px;
+    margin-bottom: 60px;
+    background: #e6e6e6;
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+/* Side bar
+ -------------------------------------------*/
+
+.offset-sidebar-width {
+    margin-left: 300px;
+}
+
+#sidebar li {
+    width: 100%;
+}
+
+#sidebar .list-group-item-action:hover {
+    background-color: #EEEEEE;
+}
+
+#sidebar .list-group-item:first-child, #sidebar .list-group-item:last-child {
+    border-radius: 0;
+}
+
+#sidebar-wrapper {
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    height: calc(100% - 50px - 59px);
+    overflow-y: auto;
+}
+
+#sidebar-container, #sidebar-wrapper {
+    width: 300px;
+}
+
+#sidebar {
+    border: none;
+}
+
+#sidebar-header {
+    border: none;
+}
+
+
+#sidebar-body {
+    border: none;
+    padding: 0;
+}
+
+#sidebar-body a {
+    padding: 0.5rem 1.25rem;
+}
+
+tr.selected {
+    background-color: palegreen;
+}
+
+
+/* Layouts
+ -------------------------------------------*/
+html {
+    height: calc(100% - 110px);
+}
+
+body {
+    height: calc(100% - 110px);
+    /*background: #000000 url(/img/page_background.jpg);*/
+    background-size: cover;
+}
+
+#master-container, #main-wrapper, #main {
+    height: 100%;
+}
+
+#main-container {
+    padding-top: 25px;
+    max-width: 1340px;
+    /*background: #ffffff;*/
+    opacity: .8;
+    min-height: 100%;
+}
+
+
+.header-site {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60px;
+}
+
+
+#footer-div {
+    /*background: #000000 url(/img/banner_background.jpg);*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #00000000;
+}
+
+#cookieConsent {
+    margin-top: 15px;
+}
+
+#top-navbar {
+    border: none;
+    max-width: 1340px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #004E89;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+footer {
+    border: none;
+}
+
+/**** START Homepage Logos ****/
+.logo-wrapper-md {
+    background-color: white;
+    box-sizing: content-box;
+    margin: 5px 0;
+}
+
+.logo-md {
+    max-height: 80px;
+    margin: auto;
+}
+
+.logo-wrapper-lg {
+    background-color: white;
+    box-sizing: content-box;
+    margin: 5px 0;
+}
+
+.logo-lg {
+    max-height: 120px;
+    margin: auto;
+}
+
+@media (min-width: 1200px) {
+    .home-title {
+        font-size: 4.5rem;
+    }
+}
+
+@media (max-width: 1199px) {
+    .logo-md {
+        max-height: 70px;
+    }
+
+    .home-title {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .logo-md {
+        max-height: 50px;
+    }
+
+    .logo-lg {
+        max-height: 120px;
+    }
+
+    .home-title {
+        font-size: 3rem;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .logo-md {
+        max-height: 60px;
+    }
+
+    .logo-wrapper-md {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .logo-lg {
+        max-height: 90px;
+    }
+}
+
+@media (max-width: 575px) {
+    .logo-md {
+        max-height: 60px;
+    }
+
+    .logo-lg {
+        max-height: 80px;
+    }
+}
+/**** END Homepage Logos ****/

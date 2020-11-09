@@ -1,0 +1,26 @@
+﻿@page
+@model RecipeBook.Areas.Identity.Pages.Account.Admin.IndexModel
+@{
+    ViewData["Title"] = "Manage Users";
+}
+
+<div class="row">
+    <div class="col-md-6 col-lg-4 card">
+        <h2>Manage Users</h2>
+
+        <p>
+            <a asp-area="Identity" asp-page="/Account/Admin/Register">Register New User</a>
+        </p>
+    </div>
+</div>
+
+
+@foreach (var item in Model.Households)
+{
+    <div class="row">
+        <div class="col-12 card">
+            <h4>@item.Name</h4>
+            @await Html.PartialAsync("_UserListPartial", item.AppUsers)
+        </div>
+    </div>
+}

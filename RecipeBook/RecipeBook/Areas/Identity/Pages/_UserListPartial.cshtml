@@ -1,0 +1,47 @@
+﻿@model List<RecipeBook.Areas.Identity.Models.AppUser>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].Email)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].FirstName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].LastName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].EmailConfirmed)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td class="text-nowrap">
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td class="text-nowrap">
+                        @Html.DisplayFor(modelItem => item.FirstName)
+                    </td>
+                    <td class="text-nowrap">
+                        @Html.DisplayFor(modelItem => item.LastName)
+                    </td>
+                    <td class="text-nowrap">
+                        @Html.DisplayFor(modelItem => item.EmailConfirmed)
+                    </td>
+                    <td class="text-nowrap">
+                        <a asp-area="Identity" asp-page="/Account/Admin/EditUser" asp-route-id="@item.Id">Edit</a>&nbsp;&nbsp;|&nbsp;
+                        <a asp-area="Identity" asp-page="/Account/Admin/ChangeUserEmail" asp-route-id="@item.Id">Reset email</a>&nbsp;&nbsp;|&nbsp;
+                        <a asp-area="Identity" asp-page="/Account/Admin/ChangeUserPassword" asp-route-id="@item.Id">Reset password</a>&nbsp;&nbsp;|&nbsp;
+                        <a asp-area="Identity" asp-page="/Account/Admin/DeleteUser" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>

@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<partial name="_HeadPartial" />
+<body>
+    <partial name="_HeaderPartial" />
+    <div id="master-container" class="container-fluid p-0">
+        @RenderBody()
+    </div>
+
+    <partial name="_FooterPartial" />
+    <partial name="_EnvironmentPartial" />
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

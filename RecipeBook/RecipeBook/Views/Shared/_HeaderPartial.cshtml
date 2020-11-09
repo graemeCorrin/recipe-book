@@ -1,0 +1,44 @@
+﻿@inject UserManager<AppUser> UserManager
+
+<header>
+    <div class="header-site fixed-top">
+        <nav id="top-navbar" class="fixed-top navbar navbar-expand-sm navbar-toggleable-sm navbar-dark">
+
+            <a class="navbar-brand nav-link text-light font-weight-bold" asp-area="" asp-controller="Home" asp-action="Index"><img class="site-logo" src="@Constants.LogoPath">@Constants.SiteAbbreviation</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+
+                <partial name="_LoginPartial" />
+
+                <ul class="navbar-nav">
+
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-bold" asp-area="" asp-controller="Home" asp-action="Index">
+                                <partial name="Icons/Friend" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-bold" asp-area="" asp-controller="Home" asp-action="Index">
+                                <partial name="Icons/Message" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-bold" asp-area="" asp-controller="Home" asp-action="Index">
+                                <partial name="Icons/Notification" />
+                            </a>
+                        </li>
+                    }
+                </ul>
+
+            </div>
+
+
+
+        </nav>
+    </div>
+</header>

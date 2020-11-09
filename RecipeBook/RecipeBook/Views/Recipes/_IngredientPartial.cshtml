@@ -1,0 +1,28 @@
+﻿@model RecipeBook.Models.Ingredient
+
+<div class="card form-section">
+    <div class="card-header">
+        <span class="h5">Yo Yo Yo</span>
+    </div>
+    <div class="card-body">
+        <div class="form-row">
+            <div class="form-group col">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group col">
+                <label asp-for="Unit" class="control-label"></label>
+                <select asp-for="Unit" class="form-control" asp-items="ViewBag.Units" onchange="onProjectChange()">
+                    <option value="">&lt;Required&gt;</option>
+                </select>
+                <span asp-validation-for="Unit" class="text-danger"></span>
+            </div>
+            <div class="form-group col">
+                <label asp-for="Quantity" class="control-label"></label>
+                <input asp-for="Quantity" class="form-control" />
+                <span asp-validation-for="Quantity" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+</div>
